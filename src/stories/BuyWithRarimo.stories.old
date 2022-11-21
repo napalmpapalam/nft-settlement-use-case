@@ -1,0 +1,49 @@
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import React from "react";
+
+import { BuyWithRarimo } from "./BuyWithRarimo";
+
+export default {
+  title: "Example/BuyWithRarimo",
+  component: BuyWithRarimo,
+} as ComponentMeta<typeof BuyWithRarimo>;
+
+const Template: ComponentStory<typeof BuyWithRarimo> = (args) => (
+  <BuyWithRarimo {...args} />
+);
+
+export const BuyWithRarimoExample = Template.bind({});
+BuyWithRarimoExample.args = {
+  // More on composing args: https://storybook.js.org/docs/react/writing-stories/args#args-composition
+};
+
+export const BuyWithRarimoChainList = Template.bind({});
+BuyWithRarimoChainList.args = {
+  // More on composing args: https://storybook.js.org/docs/react/writing-stories/args#args-composition
+  chainList: [
+    {
+      contractAddress: "0x7ce68BDE528A2623198aF3756B073FAb376b9fe2",
+      chainId: 1,
+      symbol: "ETH",
+      chainType: "evm",
+      icon: "https://chainlist.org/_next/image?url=https%3A%2F%2Fdefillama.com%2Fchain-icons%2Frsz_ethereum.jpg&w=32&q=75",
+      name: "Ethereum Mainnet",
+    },
+    {
+      contractAddress: "0x7ce68BDE528A2623198aF3756B073FAb376b9fe21",
+      chainId: 137,
+      symbol: "MATIC",
+      chainType: "evm",
+      icon: "https://chainlist.org/_next/image?url=https%3A%2F%2Fdefillama.com%2Fchain-icons%2Frsz_polygon.jpg&w=32&q=75",
+      name: "Polygon Mainnet",
+    },
+    // {
+    //   chainId: 5,
+    //   name: "Görli",
+    //   symbol: "GoerliETH",
+    //   chainType: "evm",
+    //   icon: "https://chainlist.org/_next/image?url=https%3A%2F%2Fdefillama.com%2Fchain-icons%2Frsz_ethereum.jpg&w=32&q=75",
+    //   contractAddress: "0x7ce68BDE528A2623198aF3756B073FAb376b9fe21s",
+    // },
+  ],
+};
